@@ -1,0 +1,56 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Arabic - Roman Converter</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+	  
+		<div class="container-fluid outerdiv" ng-app="myApp">
+	  
+   		  	<div class="col-md-12">&nbsp;</div>
+	  
+		  	<div class="col-md-12">
+			  	<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-4">
+					<p class="lead">This is a roman-arabic converter</p>
+				</div>
+			  	<div class="col-md-4">&nbsp;</div>
+		  	</div>
+		  
+  		  	<div class="col-md-12">&nbsp;</div>
+		  
+   		  	<div class="col-md-12">
+   		  	
+			  	<div class="col-md-6" ng-controller="ArabicRomanConvertController">
+		   		  	<div class="col-md-6">
+						<div class="input-group search-bar">
+							<input type="text" ng-model="arabic" ng-model-options="{ debounce: 800 }" onclick="select()" class="form-control" placeholder="Arabic number to convert" autofocus />
+							<span class="input-group-addon bar-style"><i class="glyphicon glyphicon-cog"></i></span>
+						</div>
+		   		  	</div>
+		   		  	<div class="col-md-6">
+	   		  			<p class="lead">Result : <b>{{ romanResult.romanNumber }}{{ romanResult.message }}</b></p>
+		   		  	</div>					
+				</div>		
+   		  	
+			  	<div class="col-md-6" ng-controller="ArabicRomanConvertController">
+		   		  	<div class="col-md-6">
+						<div class="input-group search-bar">
+							<input type="text" ng-model="roman" ng-model-options="{ debounce: 800 }" onclick="select()" class="form-control" placeholder="Arabic number to convert" autofocus />
+							<span class="input-group-addon bar-style"><i class="glyphicon glyphicon-cog"></i></span>
+						</div>
+		   		  	</div>
+		   		  	<div class="col-md-6">
+	   		  			<p class="lead">Result : <b>{{ arabicResult.arabicNumber }}{{ arabicResult.message }}</b></p>
+		   		  	</div>					
+				</div>		
+
+			</div>
+		</div>	
+		<script src="angular/angular.min.js"></script>
+		<script src="js/converter.js"></script>
+
+	</body>
+</html>
