@@ -21,3 +21,6 @@ All the librairies or dependencies needed are included with the project.
 - com.kata.model : contains all the bean classes for the definition of the data model and the database tables associated. Only used for the database implementation.
 - com.kata.repository : contains all the repository classes needed for querying/insert/update a specific bean. Only used for the database implementation.
 - com.kata.services : contains all the services classes used for the two different implementations (enums and model). The classes are responsible to compute arabic numbers to roman numbers and vice versa.
+
+# Web Application
+- The files used for the web application are stored inside the src/main/ressources/static folder.
